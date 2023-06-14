@@ -1,0 +1,44 @@
+nav {
+    background-color: #ecececf7; /* Helles Grau */
+    display: flex;
+    padding: 0.6em;
+}
+
+#logo-placeholder {
+    width: 3em; /* Breite des Logos anpassen */
+    height: 3em; /* Höhe des Logos anpassen */
+    background-image: url(/Users/idajenner/Desktop/MediaSystems/aprgprojekt-main/LOGO.pdf); /* Pfad zum Logo-Bild angeben */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+
+.main {
+    border-radius: 0.313em;
+    padding: 2em;
+    background-color: #C4C4C5;
+    /*margin-top: 2em;*/
+    height: 30em;
+    margin: 4em 2em 3em 2em;
+
+}
+
+body {
+    background-color: #ECECEC;
+}
+
+#login-button,
+#newuser-button{
+    background-color: #28282c; /* Hintergrundfarbe mittelgrau */
+    color: white; /* Textfarbe weiß */
+    border: none; /* Kein Rahmen */
+    padding: 10px 50px; /* Innenabstand */
+    border-radius: 5px; /* Abgerundete Ecken */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3em; /* Schriftgröße vergrößern */
+    font-family: Arial, sans-serif; /* Schriftart ändern */
+}

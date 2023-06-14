@@ -2,38 +2,129 @@
 <html>
     <head>
         <title>Please Select</title>
+        <link rel="stylesheet" type="text/css" href="/style.css">
     </head>
+    <style>
+        nav {
+        background-color: #ecececf7; /* Helles Grau */
+        display: flex;
+        justify-content: space-between;
+        padding: 0.6em;
+    }
+
+#logo {
+    width: 6em; /* Breite des Logos anpassen */
+    height: 3em; /* Höhe des Logos anpassen */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+}
+
+.main {
+    border-radius: 0.313em;
+    padding: 2em;
+    background-color: #C4C4C5;
+    /*margin-top: 2em;*/
+    height: 30em;
+    margin: 3em 2em 3em 2em;
+
+}
+
+body {
+    background-color: #ECECEC;
+}
+
+#main-buttons{
+    background-color: #28282c; /* Hintergrundfarbe mittelgrau */
+    color: white; /* Textfarbe weiß */
+    border: none; /* Kein Rahmen */
+    padding: 10px 50px; /* Innenabstand */
+    border-radius: 5px; /* Abgerundete Ecken */
+    margin-bottom: 20px;
+    margin-top:1em;
+    width: 200px; /* Breite des Buttons */
+  height: 30px; /* Höhe des Buttons */
+  text-align: center;
+}
+
+
+
+#logout-button{
+  background-color: #28282c; /* Hintergrundfarbe mittelgrau */
+  color: white; /* Textfarbe weiß */
+  border: none; /* Kein Rahmen */
+  padding: 10px 50px; /* Innenabstand */
+  border-radius: 5px; /* Abgerundete Ecken */
+  float: right; /* Element nach rechts floaten */
+}
+
+input[name="userName"],input[name="userPassword"]{
+  font-family: Arial, sans-serif;
+  border: 2px solid gray;
+  border-radius: 8px;
+  padding: 5px;
+  margin-bottom: 1em;
+  
+}
+h1 {
+    font-size: 2em; /* Schriftgröße vergrößern */
+    
+}
+
+hr {
+  border: none;
+  height: 1.5px;
+  background-color: gray;
+  margin: 1em 0;
+  width:50%;
+}
+</style>
     <body>
-        <h1>Bitte Wählen sie</h1>
+        <nav>
+            <img src="images/logo_aprg.png" id="logo" alt="Logo">
+            <form action="/logOut" method="post">
+                <button type="submit" id="logout-button">Log out</button>
+            </form>
+        </nav>
+        <div class="main">
+        <h1>Bitte Wählen Sie</h1>
         <form action="/learn" method="post">
+            <hr/>
             Anzahl der Aufgaben: <select id="anzahlAufgaben" name="anzahlAufgaben">
             <option value="1">1</option><br>
             <option value="2">2</option><br>
             
             </select>
-            <br>
-            Kapitel: <br>
+            <hr/>
+
+           Kapitel:
+           <br>
             <input type="checkbox" id="1" name="kapitel" value=1>
             <label for="1">1</label>
+            <br>
             <input type="checkbox" id="2" name="kapitel" value=2>
             <label for="2">2</label>
+            <br>
             <input type="checkbox" id="3" name="kapitel" value=3>
             <label for="3">3</label>
+            <br>
             <input type="checkbox" id="4" name="kapitel" value=4>
-            <label for="4">4</label><br>
+            <label for="4">4</label>
+            <br>
 
-        
-            Art: <input type="checkbox" id="python" name="aufgabenart" value="python">
+            <hr/>
+            Art: <br><input type="checkbox" id="python" name="aufgabenart" value="python">
+            
             <label for="python">python</label>
             <input type="checkbox" id="kopfrechnen" name="aufgabenart" value="kopfrechnen">
             <label for="kopfrechnen">kopfrechnen</label>
-
-            <button type="submit">Test starten</button>
+            <br>
+            <button type="submit" id="main-buttons">Test starten</button>
         </form>
         
         
-        <form action="/logOut" method="post">
-            <button type="submit">Log out</button>
-        </form>
+    
+        </div>
     </body>
 </html>

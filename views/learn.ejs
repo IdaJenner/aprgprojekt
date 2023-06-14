@@ -30,7 +30,83 @@
 </html>
 -->
 <!DOCTYPE html>
+<style>
+    nav {
+    background-color: #ecececf7; /* Helles Grau */
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6em;
+    }
+
+    #logo {
+    width: 6em; /* Breite des Logos anpassen */
+    height: 3em; /* Höhe des Logos anpassen */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    cursor: pointer;
+    }
+
+    .main {
+    border-radius: 0.313em;
+    padding: 2em;
+    background-color: #C4C4C5;
+    height: 30em;
+    margin: 3em 2em 3em 2em;
+
+    }
+
+    body {
+    background-color: #ECECEC;
+    }
+
+    #main-buttons{
+    background-color: #28282c; /* Hintergrundfarbe mittelgrau */
+    color: white; /* Textfarbe weiß */
+    border: none; /* Kein Rahmen */
+    padding: 10px 50px; /* Innenabstand */
+    border-radius: 5px; /* Abgerundete Ecken */
+    margin-bottom: 20px;
+}
+
+    #logout-button{
+    background-color: #28282c; /* Hintergrundfarbe mittelgrau */
+    color: white; /* Textfarbe weiß */
+    border: none; /* Kein Rahmen */
+    padding: 10px 50px; /* Innenabstand */
+    border-radius: 5px; /* Abgerundete Ecken */
+    float: right; /* Element nach rechts floaten */
+    }
+
+    input[name="userName"],input[name="userPassword"]{
+    font-family: Arial, sans-serif;
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 1em;
+
+    }
+    h1 {
+    font-size: 2em; /* Schriftgröße vergrößern */
+    font-family: Arial, sans-serif; /* Schriftart ändern */
+    }
+
+    hr {
+    border: none;
+    height: 1.5px;
+    background-color: gray;
+    margin: 1em 0;
+    width:50%;
+    }
+</style>
     <body>
+        <nav>
+            <img src="images/logo_aprg.png" id="logo" alt="Logo">
+            <form action="/logOut" method="post">
+                <button type="submit" id="logout-button">Log out</button>
+            </form>
+        </nav>
+        <div class="main">
         <form action="/auswertung" method="post">
         <%for(let i = 0; i < aufgaben.length; i++){
             %>
@@ -41,14 +117,16 @@
             <%
             }
             %>
-            <input type="hidden" name="anzahlAufgaben" value="<%=aufgaben.length%>">
-            <button type="submit">Abgeben</button>
+            <br>
+            <input type="hidden" name="anzahlAufgaben" value="<%=aufgaben.length%>"><br>
+            <button type="submit"id="main-buttons">Abgeben</button>
         </form>
 
         <form action="/select" method="post">
-            <button type="submit">Test abbrechen</button>
+            <button type="submit"id="main-buttons">Test abbrechen</button>
 
         </form>
+    </div>
     </body>
  
    
