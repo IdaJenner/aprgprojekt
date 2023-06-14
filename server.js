@@ -53,7 +53,11 @@ app.post("/login",function(req,res){
     res.render("login");
 });
 
-
+// Statisches Dateiverzeichnis einrichten
+app.use(express.static('images'));
+app.use(express.static('style'));
+app.use(express.static('views'));
+app.use(express.static(__dirname + "/images"));
 //logintry
 app.post("/logintry",function(req,res){
     const username = req.body["userName"];
