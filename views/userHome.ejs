@@ -2,15 +2,14 @@
 <html>
     <head>
         <title>Welcome</title>
-        <link rel="stylesheet" type="text/css" href="/style/home.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <style>
-    
-</style>
   
     <body>
         <nav>
-            <img src="images/logo_aprg.png" id="logo" class="logo" alt="Logo">
+            <a href="/home">
+                <img src="logo_aprg.png" id="logo" class="logo" alt="Logo">
+              </a>
             <form action="/logOut" method="post">
                 <button type="submit" id="logout-button">Log out</button>
             </form>
@@ -18,12 +17,12 @@
         <div class="main">
         <h1>Welcome</h1>
         <form action="/select" method="post">
-            <button type="submit">Aufgaben</button>
+            <button type="submit" id="main-buttons">Aufgaben</button>
         </form>
     
        
         <form action="/logOut" method="post">
-            <button type="submit" id="login-button">Log in</button>
+            <button type="submit" id="main-buttons">Login</button>
         </form>
         </div>
     </body>
