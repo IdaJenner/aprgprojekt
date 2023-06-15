@@ -1,6 +1,6 @@
 
 nav {
-background-color: #ecececf7; /* Helles Grau */
+background-color: #e9e9e9; /* Helles Grau */
 display: flex;
 justify-content: space-between;
 padding: 0.6em;
@@ -39,10 +39,11 @@ float: right; /* Element nach rechts floaten */
 
 input[name="userName"],input[name="userPassword"]{
 font-family: Arial, sans-serif;
-border: 2px solid gray;
-border-radius: 8px;
+border: 1px solid gray;
+border-radius: 5px;
 padding: 5px;
 margin-bottom: 1em;
+background-color: lightgray;
 
 }
 h1 {
